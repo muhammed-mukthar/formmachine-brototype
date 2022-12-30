@@ -9,10 +9,10 @@ mongoose.set("strictQuery", false);
  mongoose.connect(process.env.DB_CONNECT)
 .then(()=>console.log('connected to db')
 )
-app.use(cors({ origin: process.env.CORS_VARS.split(", ") }));
+app.use(cors({ origin: ['https://brototype-machine.netlify.app', 'https://lijoy.netlify.app']}));
 
 app.use(express.json());
 app.use('/api',apiroute)
-app.listen(process.env.PORT||5000, () => {
+app.listen(3000, () => {
   console.log("port running on 5000");
 });
