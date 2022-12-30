@@ -9,7 +9,7 @@ mongoose.set("strictQuery", false);
  mongoose.connect(process.env.DB_CONNECT)
 .then(()=>console.log('connected to db')
 )
-app.use(cors({ origin: ['https://brototype-machine.netlify.app', 'https://lijoy.netlify.app']}));
+app.use(cors({ origin: 'https://brototype-machine.netlify.app'}));
 
 app.use(express.json());
 app.use('/api',apiroute)
