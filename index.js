@@ -13,6 +13,6 @@ app.use(cors({ origin: process.env.CORS_VARS.split(", ") }));
 
 app.use(express.json());
 app.use('/api',apiroute)
-app.listen(5000, () => {
+app.listen(process.env.PORT||5000, () => {
   console.log("port running on 5000");
 });
